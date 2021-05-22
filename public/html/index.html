@@ -17,15 +17,21 @@
 
     <!-- HEADER -->
             <header>
-                <a href="#" class="back-icon"><i class="fa fa-arrow-left"></i></a>
+                <a href="../html/login.html" class="back-icon"><i class="fa fa-arrow-left"></i></a>
                 <img src="../image/tok.jpg.jpeg">
                 <div class="details">
                     <span>Zeii Sart</span>
                     <p>Active now</p>
                 </div>
+                <!-- <button><i class="fa fa-bell"></i></button> -->
+                <a href="../html/user.html" class="notification">
+                    <span><i class="fa fa-bell"></i></span>
+                    <span class="badge">3</span>
+                  </a>
             </header>
     <!-- HEADER -->
     <div class="content_Chat">
+
     </div>
     <!-- SEND INFO -->
             <form action="#" class="typing-area">
@@ -35,8 +41,8 @@
                 <button id="emoji">&#128512;</button>
                 <input type="text" placeholder="Enter message..." id="messages">
                 <button><i class="fa fa-picture-o" id="picture"></i></button>
-                <button><i class="fa fa-camera" id="camera"></i></button>
-                <button><i class="fa fa-microphone" id="microphone"></i></button>
+                <!-- <button><i class="fa fa-camera" id="camera"></i></button> -->
+                <button><i class="fa fa-microphone" id="audio" onmousedown="record(this)" onmouseup="stop(this)"></i></button>
                 <button><i class="fa fa-paper-plane" id="paper_plane"></i></button>
             </form>
     <!-- SEND INFO -->

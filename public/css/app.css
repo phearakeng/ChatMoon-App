@@ -59,8 +59,9 @@ body {
 /* |==========================|LOGIN|==========================| */
 
 .wrapper {
-    background: white;
-    width: 450px;
+    /* background-image:url(../image/moon.gif);
+    color: white; */
+    /* width: 450px; */
     border-radius: 16px;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
                 0 23px 64px -48px rgba(0,0,0,0.5);
@@ -262,7 +263,7 @@ form .name-details .field:last-child {
 }
 
 
-.users .search input:active {
+.users .search input {
     opacity: 1;
     pointer-events: auto;
 }
@@ -280,7 +281,7 @@ form .name-details .field:last-child {
     transition: all 0.2s ease;
 }
 
-.users .search button.active {
+.users .search button {
     color: #fff;
     background: #333;
 }
@@ -294,12 +295,12 @@ form .name-details .field:last-child {
     width: 0px;
 }
 
-.details span {
-    color: rgb(25, 6, 204);
+.chat-area .details span {
+    color: white;
 }
 
-.details p {
-    color: rgb(9, 179, 9);
+.chat-area .details p {
+    color: rgb(40, 230, 40);
 }
 
 .users-list a {
@@ -333,19 +334,41 @@ form .name-details .field:last-child {
 }
 
 /* ====================|CHAT AREA|==================== */
+.wrapper,
+.form_signup {
+    width: 40%;
+}
+
+.form_signup {
+    width: 100%;
+}
+
+.name-details, .field, input {
+    width: 100%;
+}
+
+.wrapper .chat-area header,
+.content_Chat,
+.typing-area {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 23px 64px -48px rgba(0,0,0,0.5);
+}
 
 .chat-area header {
     display: flex;
     align-items: center;
     padding: 18px 30px;
-    background: rgba(231, 190, 5, 0.589);
+    /* background: #8000ff; */
+    background-color: DodgerBlue;
     border-radius: 15px 15px 0 0;
     border-bottom: 1px solid red;
 }
 
 .chat-area header .back-icon {
     font-size: 18px;
-    color: #333;
+    color: rgb(255, 255, 255);
 }
 
 .chat-area header img {
@@ -362,7 +385,6 @@ form .name-details .field:last-child {
 
 .chat-box {
     overflow-y: auto;
-    background: #9b15e988;
     padding: 10px 30px 20px 30px;
     /* box-shadow: inset 0 32px 32px -32px rgb(0 0 0 /5%),
                 inset 0 -32px 32px -32px rgb(0 0 0 / 5%); */
@@ -419,26 +441,66 @@ form .name-details .field:last-child {
 }
 
 .incoming .details p {
-    background: rgba(233, 16, 204, 0.603);
+    background: rgba(255, 11, 2, 0.603);
     color: rgb(255, 255, 255);
     border-radius: 18px 18px 18px 0;
 }
 
 /* =========================SEND MEASSGAE========================= */
+/* =========================|NITIFICATION|========================= */
+
+.chat-area header .notification {
+    align-items: flex-end;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-left: auto;
+    cursor: pointer;
+    /* color: white; */
+}
+
+.notification i {
+    background-color: #ff8000;
+    color: white;
+    text-decoration: none;
+    padding: 7px 8px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification  span i{
+    font-size: 25px;
+}
+
+.notification .badge {
+    position: absolute;
+    margin-right: 20px;
+    top: 27px;
+    padding: 2px 7px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+/* =========================|NITIFICATION|========================= */
+
 
 .chat-area .typing-area {
     padding: 18px 10px;
     display: flex;
     justify-content: space-between;
+    /* background: #8000ff; */
+    background-color: DodgerBlue;
 }
 
 .typing-area input {
     height: 45px;
     width: calc(100% 50px);
     font-size: 17px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(241, 10, 10);
     padding: 0 13px;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     outline: none;
 }
 
@@ -448,11 +510,26 @@ form .name-details .field:last-child {
     padding: 5px;
     border: none;
     outline: none;
-    border-radius: 0 5px 5px 5px;
+    border-radius: 10px;
     cursor: pointer;
+    border: 1px solid rgb(85, 255, 6);
+    /* color: white; */
+    /* background: rgba(211, 226, 8, 0.897); */
 }
 
+/* ================== |Chat| ================== */
+
 .content_Chat {
-    background: #000;
-    height: 100%;
+    overflow-y: auto;
+    height: 35vw;
+    background-image: url(../image/moon3.gif);
+    background-position: center;
+    background-size: unset;
+    border-bottom: 1px solid red;
 }
+
+.content_Chat::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* ================== |Chat| ================== */
