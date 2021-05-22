@@ -3,10 +3,10 @@
 // const searchBar = document.querySelector("#search");
 // const btnSearch = document.querySelector("button");
 
-// // btnSearch.onclick = () => {
-// //     searchBar.classList.add("active");
-// //     btnSearch.focus();
-// // }
+// btnSearch.onclick = () => {
+//     searchBar.classList.add("active");
+//     btnSearch.focus();
+// }
 // let messages = []
 
 // ======================= |Search| ======================= //
@@ -44,13 +44,17 @@ const btnSend = document.querySelector("#paper_plane");
 btnSend.addEventListener("click", getMessage);
 // ======================= |Send Message| ======================= //
 
+
+
 // ======================= |USER-LIST| ======================= //
 
-// let users_list = document.createElement("div");
-// users_list.className = "users-list";
-
-let a_href = document.createElement("href");
-console.log(a_href);
+let audio = new Audio('audio_file.mp3');
+Message.addEventListener("keyup", function (event){
+    if(event.keyCode === 13){
+        getMessage();
+        audio.play();
+    }
+})
 
 // ======================= |USER-LIST| ======================= //
 

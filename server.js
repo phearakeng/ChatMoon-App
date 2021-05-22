@@ -5,6 +5,6 @@ app.listen(process.env.PORT || 5000, () => console.log("ENG-PHEARAK's The Moon_A
 app.use(express.json());
 app.use(express.urlencoded());
 
-app.use(express.static('/public/'));
+app.use(express.static('public'));
 
-app.get("/", (req, res) => res.send("Welcome to ENG-PHEARAK's The Moon_App"));
+
