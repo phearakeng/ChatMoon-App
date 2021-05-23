@@ -1,4 +1,7 @@
 // ======================= |Search| ======================= //
+const IP = "192.168.88.32";
+const PORT = 3000;
+const LOGIN_URL = "http://" + IP + ":" + PORT + "/app";
 
 // const searchBar = document.querySelector("#search");
 // const btnSearch = document.querySelector("button");
@@ -32,30 +35,26 @@ function getMessage(e) {
 
     let P = document.createElement("p");
     Detailes.appendChild(P);
-
+    
     let images = document.createElement("img");
     images.src = "../image/PHEARA_ENG.jpg";
     chat_outgoing.appendChild(images);
     
     P.textContent += Message.value;
+    Message.value == "";
+    
 }
 
 const btnSend = document.querySelector("#paper_plane");
 btnSend.addEventListener("click", getMessage);
 // ======================= |Send Message| ======================= //
 
-
-
 // ======================= |USER-LIST| ======================= //
-
-let audio = new Audio('audio_file.mp3');
-Message.addEventListener("keyup", function (event){
-    if(event.keyCode === 13){
-        getMessage();
-        audio.play();
-    }
-})
-
+function getAudio() {
+    audio.play();
+}
+let myAudio = document.querySelector("#myAudio");
+myAudio.addEventListener("click", getAudio);
 // ======================= |USER-LIST| ======================= //
 
 // ================================| Key Up |=============================== //
@@ -63,6 +62,7 @@ Message.addEventListener("keyup", function (event){
     if(event.keyCode === 13){
         getMessage();
     }
+    Message.value == "";
 })
 // ================================| Key Up |=============================== //
 
@@ -94,7 +94,7 @@ btnBold.onclick = () => {
 const btnItalic = document.querySelector("#italic");
 btnItalic.onclick = () => {
     if (Message.type == 'text') {
-        Message.style.fontStyle = 'italics';
+        Message.style.fontStyle = 'italic';
         btnItalic.classList.add("active");
     }else {
         getPass.type = "text";
@@ -103,8 +103,16 @@ btnItalic.onclick = () => {
 }
 // ================================| Italic Character |=============================== //
 
-// ================================| Voice Sound |=============================== //
+// ================================| LOGIN |=============================== //
 
+// function getLogin() {
+//     let email_login = document.querySelector("#email_login").value;
+//     let pass_login = document.querySelector("#password").value;
+//     console.log(email_login);
+//     console.log(pass_login);
+// }
 
+// let btnLogin = document.querySelector("#submit_login");
+// btnLogin.addEventListener("click", getLogin);
 
-// ================================| Voice Sound |=============================== //
+// ================================| LOGIN |=============================== //

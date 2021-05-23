@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(216, 213, 213);
+    background: rgba(12, 9, 9, 0.349);
 }
 
 /* |==========================|BANNER|==========================| */
@@ -101,23 +101,28 @@ body {
 
 .or {
     margin-top: 30px;
-    margin-left: 170px;
+    margin: 30px;
+    text-align: center;
     color: white;
+    border-bottom: 2px solid #fff;
 }
 
-
-
-
-
+.Or {
+    margin: auto;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #2a06f7;
+    width: 100%;
+}
 
 /* |==========================|BANNER|==========================| */
 
 /* |==========================|LOGIN|==========================| */
 
 .wrapper {
-    /* background-image:url(../image/moon.gif);
-    color: white; */
-    /* width: 450px; */
     border-radius: 16px;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
                 0 23px 64px -48px rgba(0,0,0,0.5);

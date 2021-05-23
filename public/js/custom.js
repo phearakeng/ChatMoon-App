@@ -1,8 +1,43 @@
-// |============================|Code JAVASCRIPT App|============================| //
+// |============================|App.html & Login.html|============================| //
+// |============================|PORT|============================| //
+const IP = "192.168.88.32";
+const PORT = 3000;
+const LOGIN_URL = "http://" + IP + ":" + PORT + "/login";
+// |============================|PORT|============================| //
 
-const getPass = document.getElementById("password");
-const getIcon_Pass = document.querySelector(".field i");
+// ========================== |LOGIN| ========================== //
 
+function getLogin(e) {
+    e.preventDefault(); 
+
+    let querry = LOGIN_REQUEST + "?username=" + email_login.value + "&" + "password=" + getPass.value;
+    axios.get(querry).then((response) => {
+        let isValid = response.data;
+        let text = "Not found!!";
+        let color = "red";
+    
+        if (isValid) {
+            text = "Login successfully!";
+            color = "green";
+        }
+        console.log(isValid);
+        Information.textContent = text;
+        Information.style.color = color;
+    });
+}
+
+let email_login = document.querySelector("#email_login");
+let Information = document.querySelector("#info");
+let getPass = document.querySelector("#password");
+let btnLogin = document.querySelector("#submit_login");
+
+btnLogin.addEventListener("click", getLogin);
+
+// ========================== |LOGIN| ========================== //
+
+// |============================|CLOSE EYE|=======================| //
+
+let getIcon_Pass = document.querySelector(".field i");
 getIcon_Pass.onclick = () => {
     if (getPass.type == "password") {
         getPass.type = "text";
@@ -12,42 +47,4 @@ getIcon_Pass.onclick = () => {
         getIcon_Pass.classList.remove("active");
     }
 }
-
-// function getData(event) {
-//     event.preventDefault();
-
-//     const first_Name = document.querySelector("#first_Name").value;
-//     const last_Name = document.querySelector("#last_Name").value;
-//     const email = document.querySelector("#email").value;
-//     const password = document.querySelector("#password").value;
-//     const file = document.querySelector("#file").value;
-
-//     console.log(first_Name);
-//     console.log(last_Name);
-//     console.log(email);
-//     console.log(password);
-//     console.log(file);
-// }
-
-// const btnSubmit = document.querySelector("#submit");
-// btnSubmit.addEventListener("click", getData);
-
-
-// |============================|Code JAVASCRIPT Login|============================| //
-// function getData_Login(e) {
-
-//     const Email_Log = document.querySelector("#email_login").value;
-//     const Pass_Log = document.querySelector("#pass_login").value;
-
-//     console.log(Email_Log);
-//     console.log(Pass_Log);
-// }
-
-// const btnSub_Log = document.querySelector("#submit_login");
-// btnSub_Log.addEventListener("click", getData_Login);
-
-
-// |============================|Code JAVASCRIPT User|============================| //
-
-
-// |============================|Code JAVASCRIPT Chat|============================| //
+// |=========================|CLOSE EYE|========================| //
