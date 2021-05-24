@@ -15,13 +15,13 @@ app.listen(process.env.PORT|| port, () => {
   console.log("server running...");
 });
 
-app.use(express.json());
-app.use(express.urlencoded());
 app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use("/login", (req, res) => {
-  const userName = req.query.username;
-  const password = req.query.password;
+app.use("/login", (request, response) => {
+  const userName = request.query.username;
+  const password = request.query.password;
 
   let result = false;
   for (let getUser of users) {
@@ -29,7 +29,7 @@ app.use("/login", (req, res) => {
       result = true;
     }
   }
-  res.send(result);
+  response.send(result);
 });
 
 

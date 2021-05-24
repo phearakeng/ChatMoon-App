@@ -1,18 +1,8 @@
-// ======================= |Search| ======================= //
+// ======================= |PORT| ======================= //
 const IP = "192.168.88.32";
 const PORT = 3000;
 const LOGIN_URL = "http://" + IP + ":" + PORT + "/app";
-
-// const searchBar = document.querySelector("#search");
-// const btnSearch = document.querySelector("button");
-
-// btnSearch.onclick = () => {
-//     searchBar.classList.add("active");
-//     btnSearch.focus();
-// }
-// let messages = []
-
-// ======================= |Search| ======================= //
+// ======================= |PORT| ======================= //
 
 // ======================= |Send Message| ======================= //
 
@@ -62,7 +52,6 @@ Message.addEventListener("keyup", function (event){
     if(event.keyCode === 13){
         getMessage();
     }
-    Message.value == "";
 })
 // ================================| Key Up |=============================== //
 
@@ -80,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 // ================================| Emoji |=============================== //
 
 // ================================| Bold Character |=============================== //
+
 const btnBold = document.querySelector("#bold");
 btnBold.onclick = () => {
     if (Message.type == "text") {
