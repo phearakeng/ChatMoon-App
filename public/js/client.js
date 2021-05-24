@@ -1,8 +1,10 @@
 // |============================|CLOSE EYE|=======================| //
+
 const IP = "192.168.88.32";
 const PORT = 3000;
 const LOGIN_URL = "http://" + IP + ":" + PORT + "/client";
 
+// |============================|CLOSE EYE|=======================| //
 
 let getPass = document.getElementById("password");
 let getIcon_Pass = document.querySelector(".field i");
@@ -16,8 +18,10 @@ getIcon_Pass.onclick = () => {
         getIcon_Pass.classList.remove("active");
     }
 }
+
 // |============================|CLOSE EYE|=======================| //
 // |============================|SIGN-UP|=======================| //
+
 function getSignup(event) {
     event.preventDefault();
 

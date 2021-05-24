@@ -11,13 +11,12 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-
 app.listen(process.env.PORT|| port, () => {
   console.log("server running...");
 });
 
-// app.use(express.json());
-// app.use(express.urlencoded());
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(express.static("public"));
 
 app.use("/login", (req, res) => {
